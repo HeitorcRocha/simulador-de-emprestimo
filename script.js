@@ -12,5 +12,7 @@ form.addEventListener("submit", (evento) => {
     return;
   }
 
-  resultado.textContent = `Valor: R$ ${valor} em ${parcelas}x`;
+    const valorParcela = valor / parcelas;
+
+  resultado.textContent = `${parcelas}x de R$ ${valorParcela.toFixed(2)}`;
 });
